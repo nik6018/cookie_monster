@@ -20,13 +20,9 @@
   "name": "My Cookie Monster",
   "version": "0.1",
   "background": { "scripts": ["background.js"] },
-  "icons": {"48" : "small.png", 
-            "128": "big.png" },
- "permissions": [
-    "cookies",
-    "<all_urls>",
-    "tabs"
-  ],
+  "icons": { "48" : "small.png", 
+             "128": "big.png" },
+ "permissions": ["cookies","<all_urls>","tabs"],
   "content_scripts": [
     {
       "matches": [
