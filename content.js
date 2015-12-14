@@ -1,17 +1,17 @@
 //////////////////////////////////////////////
-//											//
-//  Title :      Content JS 		        //
-//    										//
-//  Started by : Flux						//
-//    										//
-//  Time : 		 18:55 hrs					//
+//					    //
+//  Title :      Content JS 		    //
+//    					    //
+//  Started by : Flux			    //
+//    	                                    //
+//  Time : 	 18:55 hrs	    	    //
 //                                          //
 //  Editor : 	 Sublime Text               //
 //  	                                    //
-//	Version :    0.1            			//
+//  Version :    0.1            	    //
 //                                          //
-//  Due to Quora Bullshit policy  			//
-//											//
+//  Due to Quora Bullshit policy  	    //
+//					    //
 //////////////////////////////////////////////
 
 
