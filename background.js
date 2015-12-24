@@ -15,10 +15,12 @@
 //////////////////////////////////////////////
 
 
+console = chrome.extension.getBackgroundPage().console;
+
 chrome.runtime.onMessage.addListener(
 	function(request, sender, sendResponse) {
 		if (request.type == "cookie") {
-			chrome.cookies.getAll({domain : ".quora.com"}, function(cookies) {
+			    chrome.cookies.getAll({domain : ".quora.com"}, function(cookies) {
 				for (var i in cookies) {
 			      removeCookie(cookies[i]);
 			    }
@@ -31,6 +33,7 @@ chrome.runtime.onMessage.addListener(
 
 function removeCookie(cookie) {
   var url = "http" + (cookie.secure ? "s" : "") + "://" + cookie.domain + cookie.path;
+  //console.log(cookie);
   chrome.cookies.remove({
     "url": url,
     "name": cookie.name
