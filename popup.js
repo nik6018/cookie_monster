@@ -17,8 +17,8 @@
 
 document.getElementById("act").addEventListener("click", function (argument) {
 	chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
-  		chrome.tabs.sendMessage(tabs[0].id, {type: "hello"}, function(response) {
-   			 console.log(response.c);
+  		chrome.tabs.sendMessage(tabs[0].id, {type: "delete_cookies"}, function(response) {
+   			 console.log(response.message);
   		});
 	});
 });

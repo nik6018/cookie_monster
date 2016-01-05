@@ -14,8 +14,8 @@
 //											//
 //////////////////////////////////////////////
 
-
-console = chrome.extension.getBackgroundPage().console;
+//To see any output on the backgroundpage click on the "Inspect view : background page" 
+//console = chrome.extension.getBackgroundPage().console; <= dont use this
 
 chrome.runtime.onMessage.addListener(
 	function(request, sender, sendResponse) {
@@ -25,7 +25,7 @@ chrome.runtime.onMessage.addListener(
 			      removeCookie(cookies[i]);
 			    }
 		    });
-			sendResponse({c : true});
+			sendResponse({message : true});
 		    return true;
 		};
   
@@ -33,7 +33,6 @@ chrome.runtime.onMessage.addListener(
 
 function removeCookie(cookie) {
   var url = "http" + (cookie.secure ? "s" : "") + "://" + cookie.domain + cookie.path;
-  //console.log(cookie);
   chrome.cookies.remove({
     "url": url,
     "name": cookie.name
