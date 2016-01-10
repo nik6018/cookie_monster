@@ -19,6 +19,7 @@ function eat_all_cookies(argument) {
 	chrome.runtime.sendMessage({type: "cookie"}, function(response) {
   		if (response.message) {
   			console.log("From the backgroundjs");
+//            location.reload();
   		};
 	});
 }
